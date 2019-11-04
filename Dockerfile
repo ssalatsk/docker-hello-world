@@ -1,9 +1,14 @@
+FROM golang:buster AS build
+
+RUN go get -v "github.com/svent/sift"
+
+
 FROM fedora:30
 
 LABEL com.redhat.component="docker-hello-world" \
       name="acmiel/docker-hello-world" \
-      version="1.0"
+      version="2.0"
 
-ENV GREETING="Hello there."
+COPY --from=build "/go/bin/sift" "/usr/local/bin/sift"
 
-CMD printf "%s\n" "$GREETING"
+CMD ["sift", "^PRETTY_NAME", "/etc/os-release"]
