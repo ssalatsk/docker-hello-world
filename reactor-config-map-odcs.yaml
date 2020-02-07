@@ -1,0 +1,8 @@
+odcs:
+  api_url: http://example.com
+  auth:
+    ssl_certs_dir: /here
+  signing_intents:
+    - name: default
+      keys: []
+  default_signing_intent: default
