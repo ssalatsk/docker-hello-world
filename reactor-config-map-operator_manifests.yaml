@@ -1,0 +1,5 @@
+operator_manifests:
+  allowed_registries: null
+  registry_post_replace:
+    - old: registry-proxy.engineering.redhat.com
+      new: quay.io

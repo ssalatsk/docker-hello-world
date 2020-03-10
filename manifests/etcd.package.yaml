@@ -1,0 +1,9 @@
+packageName: osbs-test-sandwich-etcd
+channels:
+- name: alpha
+  currentCSV: etcdoperator.v0.9.2
+- name: beta
+  currentCSV: etcdoperator.v0.9.2
+- name: stable
+  currentCSV: etcdoperator.v0.9.2
+defaultChannel: alpha

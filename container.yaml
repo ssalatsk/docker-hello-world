@@ -1,0 +1,5 @@
+---
+image_build_method: imagebuilder
+
+operator_manifests:
+  manifests_dir: manifests/
