@@ -1,3 +1,8 @@
+FROM fedora:30
+
+RUN echo "Hello there."
+
+
 FROM scratch
 
 LABEL com.redhat.component="docker-hello-world" \
