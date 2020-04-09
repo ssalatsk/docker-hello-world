@@ -1,4 +1,4 @@
-FROM scratch
+FROM fedora:30
 
 LABEL com.redhat.component="docker-hello-world" \
       name="acmiel/operator-bundle" \
