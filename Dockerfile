@@ -6,4 +6,10 @@ LABEL com.redhat.component="docker-hello-world" \
 
 ENV GREETING="Hello there."
 
-CMD printf "%s\n" "$GREETING"
+ENV COOL_VAR_A="$COOL_VAR_A" \
+    COOL_VAR_B="$COOL_VAR_B" \
+    COOL_VAR_C="$COOL_VAR_C"
+
+CMD echo "COOL_VAR_A: $COOL_VAR_A"; \
+    echo "COOL_VAR_B: $COOL_VAR_B"; \
+    echo "COOL_VAR_C: $COOL_VAR_C"
