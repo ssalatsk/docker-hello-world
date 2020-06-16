@@ -1,4 +1,4 @@
-FROM fedora:30
+FROM registry.fedoraproject.org/fedora:30
 
 LABEL com.redhat.component="docker-hello-world" \
       name="acmiel/docker-hello-world" \
