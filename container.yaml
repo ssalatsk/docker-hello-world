@@ -1,0 +1,7 @@
+---
+image_build_method: imagebuilder
+remote_source:
+  repo: https://github.com/release-engineering/retrodep.git
+  ref: e1be527f39ec31323f0454f7d1422c6260b00580
+  pkg_managers:
+    - gomod

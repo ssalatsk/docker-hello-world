@@ -4,6 +4,7 @@ LABEL com.redhat.component="docker-hello-world" \
       name="acmiel/docker-hello-world" \
       version="1.0"
 
-ENV GREETING="Hello there."
+# Copy the upstream sources from cachito integration
+COPY $REMOTE_SOURCE $REMOTE_SOURCE_DIR
 
-CMD printf "%s\n" "$GREETING"
+CMD ["ls", "-la", "/remote-source"]
