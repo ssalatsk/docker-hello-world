@@ -1,5 +1,10 @@
-FROM fedora:30
+FROM fedora:32
 
-ENV GREETING="Hello there."
+RUN dnf -y install busybox
 
-CMD printf "%s\n" "$GREETING"
+
+FROM scratch
+
+COPY --from=0 /usr/sbin/busybox /bin/busybox
+
+COPY bin/ /bin/
