@@ -7,4 +7,6 @@ FROM scratch
 
 COPY --from=0 /usr/sbin/busybox /bin/busybox
 
-COPY bin/ /bin/
+RUN ["busybox", "ln", "-s", "/bin/busybox", "/bin/test"]
+RUN ["busybox", "ln", "-s", "/bin/busybox", "/bin/stat"]
+RUN ["busybox", "ln", "-s", "/bin/busybox", "/bin/cat"]
